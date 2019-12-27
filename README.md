@@ -1,6 +1,7 @@
-# Angular8FirebaseCRUD
+## Munchies Online Food Delivery 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0-beta.16.
+This project is a straight forward order system for users to order their food
+
 
 ## Development server
 
