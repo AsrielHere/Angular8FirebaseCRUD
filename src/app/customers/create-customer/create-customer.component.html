@@ -1,0 +1,53 @@
+<h3>Order process</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input type="text" class="form-control" id="age" required [(ngModel)]="customer.Email" name="Email">
+    </div>
+
+    <div class="form-group">
+      <label for="PhoneNumber">PhoneNumber</label>
+      <input type="text" class="form-control" id="PhoneNumber" required [(ngModel)]="customer.PhoneNumber" name="PhoneNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="Address">Address</label>
+      <input type="text" class="form-control" id="Address" required [(ngModel)]="customer.Address" name="Address">
+    </div>
+
+    <h4 class="card-text" style="text-align: center;">Step 2: Choose your menu.</h4>  
+            <div class="card border-success text-dark mb-3">
+                <div class="card-header">Menu</div>
+                <div class="card-body">
+                  
+                  <p class="card-text">SET A - Nasi Ayam Hainan + Ice Green Tea (RM5)</p>
+                  <p class="card-text">SET B - Nasi Ayam Roasted + Ice Green Tea (RM5)</p>
+                  <p class="card-text">SET C - Nasi Ayam Berempah + Ice Green Tea (RM5)</p>
+                  <p class="card-text">SET D - Nasi Ayam Sambal + Ice Green Tea (RM5)</p>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label class="col-form-label col-form-label-sm">Package</label>
+                <select name="Packagess" class="custom-select" required [(ngModel)]="customer.Packagess" name="Address">
+                  <option selected value="SET A">SET A</option>
+                  <option value="SET B">SET B</option>
+                  <option value="SET C">SET C</option>
+                  <option value="SET D">SET D</option>
+                </select>
+            </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <button class="btn btn-success" (click)="newCustomer()">Add</button>
+</div>

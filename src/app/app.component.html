@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="bg"></div>
+<div class="container">
+  <div class="row">
+    <div class="card text-white bg-info mb-3 m-4 col-md-12">
+      <div class="card-body">
+        <div class="container-fluid m-3">
+          <div style="color: blue;">
+            <!--<h1>{{title}}</h1>
+            <h3>{{description}}</h3> -->
+          </div>
+        
+          <nav class="">
+            <a routerLink="home" class="btn btn-secondary active m-2" role="button" routerLinkActive="active">Home</a>
+            <a routerLink="about" class="btn btn-secondary active m-2" role="button" routerLinkActive="active">About Us</a>
+            <!--<a routerLink="customers" class="btn btn-secondary active m-2" role="button" routerLinkActive="active">Customers</a> -->
+            <a routerLink="add" class="btn btn-secondary active m-2" role="button" routerLinkActive="active">Let's get started!</a>
+          </nav>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
